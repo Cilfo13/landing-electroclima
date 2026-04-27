@@ -1,0 +1,65 @@
+---
+---
+<style>
+  #social {
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    padding: 96px 0;
+  }
+  .social-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .benefits-list {
+    list-style: none; display: flex; flex-direction: column; gap: 14px;
+    margin: 32px auto; text-align: left; max-width: 340px;
+  }
+  .benefits-list li {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 16px; color: rgba(255,255,255,.85);
+  }
+  .check-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(34,197,94,.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #22C55E; flex-shrink: 0;
+  }
+  @media (max-width: 640px) { #social { padding: 64px 0; } }
+</style>
+
+<section id="social">
+  <div class="container">
+    <div class="social-inner">
+      <span class="badge badge-white fade-up">Beta abierta</span>
+      <h2 class="section-h2-white fade-up fade-up-delay-1" style="margin-top:20px;">
+        Sé parte de los primeros.
+      </h2>
+      <p class="section-sub-white fade-up fade-up-delay-2">
+        Estamos eligiendo a los primeros técnicos que van a usar Electroclima. Feedback directo con el equipo. Precio especial para los que entran primero.
+      </p>
+      <ul class="benefits-list fade-up fade-up-delay-3">
+        <li>
+          <span class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </span>
+          Acceso anticipado
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </span>
+          Precio de lanzamiento bloqueado de por vida
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </span>
+          Soporte directo con el fundador
+        </li>
+      </ul>
+      <a href="#cta" class="btn btn-primary fade-up fade-up-delay-4">Quiero anotarme →</a>
+    </div>
+  </div>
+</section>

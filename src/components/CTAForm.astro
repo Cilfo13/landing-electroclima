@@ -1,0 +1,125 @@
+---
+---
+<style>
+  #cta {
+    background: #F97316;
+    padding: 96px 0;
+    position: relative; overflow: hidden;
+  }
+  #cta::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,.06); border-radius: 50%;
+  }
+  #cta::after {
+    content: '';
+    position: absolute; bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: rgba(0,0,0,.06); border-radius: 50%;
+  }
+  .cta-inner { text-align: center; position: relative; z-index: 1; }
+  .cta-h2 {
+    font-size: 44px; font-weight: 800;
+    color: #fff; letter-spacing: -.03em; line-height: 1.1;
+  }
+  .cta-sub { font-size: 18px; color: rgba(255,255,255,.8); margin-top: 16px; line-height: 1.6; }
+  .cta-form {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    justify-content: center; margin-top: 40px;
+  }
+  .cta-input {
+    padding: 14px 18px; border-radius: 8px;
+    border: 2px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.15); color: #fff;
+    font-size: 16px; font-family: inherit; outline: none;
+    flex: 1; min-width: 180px; max-width: 220px;
+    transition: border-color 200ms, background 200ms;
+  }
+  .cta-input::placeholder { color: rgba(255,255,255,.6); }
+  .cta-input:focus { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.2); }
+  .cta-input.error { border-color: #ef4444; }
+  .cta-disclaimer { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 16px; }
+  .cta-whatsapp {
+    margin-top: 32px;
+    display: inline-flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,.75); font-size: 15px; text-decoration: none;
+    transition: color 200ms;
+  }
+  .cta-whatsapp:hover { color: #fff; }
+  .wa-icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .form-success {
+    background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.3);
+    border-radius: 16px; padding: 32px 40px;
+    display: none; margin-top: 24px;
+  }
+  .form-success.visible { display: inline-block; }
+  .form-success h3 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .form-success p { font-size: 16px; color: rgba(255,255,255,.8); }
+  @media (max-width: 640px) {
+    #cta { padding: 64px 0; }
+    .cta-h2 { font-size: 30px; }
+    .cta-form { flex-direction: column; align-items: stretch; }
+    .cta-input { max-width: 100%; }
+  }
+</style>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="cta-h2 fade-up">¿Te interesa? Anotate.</h2>
+      <p class="cta-sub fade-up fade-up-delay-1">Te avisamos cuando abrimos el acceso. Sin spam.</p>
+
+      <div id="formWrap">
+        <form class="cta-form fade-up fade-up-delay-2" id="ctaForm" novalidate>
+          <input class="cta-input" id="fieldName" type="text" placeholder="Tu nombre" autocomplete="given-name" />
+          <input class="cta-input" id="fieldEmail" type="email" placeholder="Tu email" autocomplete="email" />
+          <input class="cta-input" id="fieldWA" type="tel" placeholder="WhatsApp (opcional)" autocomplete="tel" />
+          <button type="submit" class="btn btn-white-orange">Quiero anotarme</button>
+        </form>
+        <p class="cta-disclaimer fade-up fade-up-delay-3">Sin spam. Desuscribite cuando quieras.</p>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <h3>¡Estás anotado! 🎉</h3>
+        <p>Te contactamos ni bien abramos el acceso. Gracias por sumarte.</p>
+      </div>
+
+      <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="cta-whatsapp fade-up fade-up-delay-4">
+        <span class="wa-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.521 5.823L.044 24l6.354-1.458A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm.002 21.818a9.824 9.824 0 0 1-5.034-1.385l-.36-.214-3.738.857.897-3.629-.236-.373A9.79 9.79 0 0 1 2.18 12c0-5.415 4.404-9.818 9.82-9.818 5.416 0 9.82 4.403 9.82 9.818 0 5.416-4.404 9.818-9.82 9.818z"/>
+          </svg>
+        </span>
+        O escribime directo por WhatsApp →
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('ctaForm') as HTMLFormElement;
+  const nameInput = document.getElementById('fieldName') as HTMLInputElement;
+  const emailInput = document.getElementById('fieldEmail') as HTMLInputElement;
+  const formWrap = document.getElementById('formWrap')!;
+  const formSuccess = document.getElementById('formSuccess')!;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    [nameInput, emailInput].forEach(f => f.classList.remove('error'));
+
+    if (!nameInput.value.trim()) { nameInput.classList.add('error'); valid = false; }
+    if (!emailInput.value.trim() || !emailInput.value.includes('@')) { emailInput.classList.add('error'); valid = false; }
+
+    if (valid) {
+      formWrap.style.display = 'none';
+      formSuccess.classList.add('visible');
+    }
+  });
+</script>

@@ -1,0 +1,96 @@
+---
+---
+<style>
+  #solution { background: #0F172A; padding: 96px 0; }
+  .feature-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 56px;
+  }
+  .feature-card {
+    background: #1E293B; border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px; padding: 28px;
+    transition: transform 200ms, border-color 200ms;
+  }
+  .feature-card:hover { transform: translateY(-3px); border-color: rgba(249,115,22,.3); }
+  .feature-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: rgba(249,115,22,.12);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px; color: #F97316;
+  }
+  .feature-card h3 { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+  .feature-card p { font-size: 15px; color: rgba(255,255,255,.55); line-height: 1.65; }
+  @media (max-width: 900px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { #solution { padding: 64px 0; } .feature-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section id="solution">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">La solución</div>
+      <h2 class="section-h2-white fade-up">Todo lo que necesitás,<br/>en un solo lugar</h2>
+      <p class="section-sub-white fade-up fade-up-delay-1">Sin complicaciones. Sin curva de aprendizaje.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Historial completo</h3>
+        <p>Sabés exactamente qué equipo tiene cada cliente y cuándo lo revisaste por última vez.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <line x1="9" y1="12" x2="15" y2="12"/>
+            <line x1="9" y1="16" x2="13" y2="16"/>
+          </svg>
+        </div>
+        <h3>Seguí cada trabajo</h3>
+        <p>Desde que entra hasta que lo cobrás. Sin nada perdido en el camino.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-2">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3>Presupuestos profesionales</h3>
+        <p>En segundos, sin calculadora. Mandá el PDF directo al cliente.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3>Facturá sin salir del sistema</h3>
+        <p>Todo integrado, sin doble carga ni errores que te cuestan tiempo.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-2">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Organizá tu semana</h3>
+        <p>Visualizá todos tus turnos y revisiones programadas de un solo vistazo.</p>
+      </div>
+    </div>
+  </div>
+</section>

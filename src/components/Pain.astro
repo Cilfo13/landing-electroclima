@@ -1,0 +1,93 @@
+---
+---
+<style>
+  #pain {
+    background: #F8FAFC;
+    padding: 96px 0;
+    color: #0F172A;
+  }
+  .pain-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .pain-card {
+    background: #fff; border: 1px solid #E2E8F0;
+    border-radius: 16px; padding: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08);
+    transition: transform 200ms, box-shadow 200ms;
+  }
+  .pain-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+  .pain-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: rgba(249,115,22,.1);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px; color: #F97316;
+  }
+  .pain-card h3 { font-size: 18px; font-weight: 600; color: #0F172A; margin-bottom: 8px; }
+  .pain-card p { font-size: 15px; color: #475569; line-height: 1.65; }
+  .pain-bridge {
+    text-align: center; margin-top: 56px;
+    font-size: 24px; font-weight: 600; color: #0F172A;
+  }
+  .pain-bridge span { color: #F97316; }
+  @media (max-width: 640px) {
+    #pain { padding: 64px 0; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .pain-bridge { font-size: 20px; }
+  }
+</style>
+
+<section id="pain">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">El problema</div>
+      <h2 class="section-h2-dark fade-up">¿Seguís manejando<br/>tu negocio así?</h2>
+      <p class="section-sub-dark fade-up fade-up-delay-1">Cada día sin sistema es plata y tiempo que perdés.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Todo por WhatsApp</h3>
+        <p>Sin historial, sin registro. Cuando algo falla, no sabés qué hiciste antes.</p>
+      </div>
+      <div class="pain-card fade-up fade-up-delay-1">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3>Presupuestos a ojo</h3>
+        <p>Cobrás por intuición. No sabés si estás ganando o perdiendo por trabajo.</p>
+      </div>
+      <div class="pain-card fade-up fade-up-delay-2">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1H6.6a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+          </svg>
+        </div>
+        <h3>Clientes que llaman todo el día</h3>
+        <p>"¿Cómo va mi pedido?" — porque no tienen visibilidad de nada y vos tampoco.</p>
+      </div>
+      <div class="pain-card fade-up fade-up-delay-3">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3>Facturación manual y caótica</h3>
+        <p>Perdés tiempo, olvidás cobrar, errores que te cuestan plata real.</p>
+      </div>
+    </div>
+    <div class="pain-bridge fade-up">
+      Hay una forma <span>mejor.</span>
+    </div>
+  </div>
+</section>

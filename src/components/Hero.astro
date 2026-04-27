@@ -1,0 +1,193 @@
+---
+---
+<style>
+  #hero {
+    min-height: 100vh;
+    background: #0F172A;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+    padding: 120px 0 80px;
+  }
+  .bg-glow-orange {
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(249,115,22,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .bg-glow-blue {
+    position: absolute; bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(37,99,235,.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-text { display: flex; flex-direction: column; gap: 24px; }
+  h1 {
+    font-size: 60px; font-weight: 800;
+    line-height: 1.1; letter-spacing: -.03em; color: #fff;
+  }
+  h1 em { font-style: normal; color: #F97316; }
+  .hero-sub {
+    font-size: 18px; line-height: 1.7;
+    color: rgba(255,255,255,.65); max-width: 480px;
+  }
+  .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .social-proof {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; color: rgba(255,255,255,.5);
+  }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #22C55E; animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; } 50% { opacity: .4; }
+  }
+
+  /* Phone mockup */
+  .hero-mockup { display: flex; justify-content: center; align-items: center; }
+  .phone-frame {
+    width: 280px; background: #1a1a2e; border-radius: 40px;
+    padding: 14px; border: 2px solid rgba(255,255,255,.1);
+    box-shadow: 0 8px 40px rgba(0,0,0,.16), 0 0 40px rgba(249,115,22,.25), 0 0 0 1px rgba(255,255,255,.05);
+    transform: rotate(3deg);
+  }
+  .phone-screen { background: #1E293B; border-radius: 28px; overflow: hidden; min-height: 520px; }
+  .phone-notch { width: 80px; height: 22px; background: #1a1a2e; border-radius: 0 0 14px 14px; margin: 0 auto; }
+  .phone-ui { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .phone-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
+  .phone-title { font-size: 15px; font-weight: 700; color: #fff; }
+  .phone-date { font-size: 11px; color: rgba(255,255,255,.4); }
+  .phone-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #F97316; display: flex; align-items: center;
+    justify-content: center; font-size: 13px; font-weight: 700; color: #fff;
+  }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.07); border-radius: 12px; padding: 12px; }
+  .stat-val { font-size: 22px; font-weight: 800; color: #fff; }
+  .stat-val span { color: #F97316; font-size: 13px; font-weight: 600; }
+  .stat-lbl { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 2px; }
+  .section-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .05em; text-transform: uppercase; }
+  .order-card {
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.07);
+    border-radius: 10px; padding: 10px 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .order-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .order-info { flex: 1; min-width: 0; }
+  .order-name { font-size: 13px; font-weight: 600; color: #fff; }
+  .order-sub { font-size: 11px; color: rgba(255,255,255,.4); margin-top: 1px; }
+  .order-badge { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 999px; }
+  .agenda-card {
+    background: rgba(249,115,22,.1); border: 1px solid rgba(249,115,22,.2);
+    border-radius: 10px; padding: 10px 12px;
+  }
+  .agenda-title { font-size: 11px; font-weight: 600; color: #F97316; text-transform: uppercase; letter-spacing: .05em; }
+  .agenda-count { font-size: 13px; font-weight: 600; color: #fff; margin-top: 4px; }
+  .agenda-hours { font-size: 11px; color: rgba(255,255,255,.4); }
+
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    h1 { font-size: 38px; }
+    .hero-mockup { order: -1; }
+    .phone-frame { width: 240px; transform: none; }
+    .phone-screen { min-height: 420px; }
+    #hero { padding: 100px 0 60px; }
+  }
+</style>
+
+<section id="hero">
+  <div class="bg-glow-orange"></div>
+  <div class="bg-glow-blue"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="fade-up">
+          <span class="badge badge-accent">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Para técnicos de AC y climatización
+          </span>
+        </div>
+        <h1 class="fade-up fade-up-delay-1">
+          Tu negocio de service,<br /><em>ordenado de una vez.</em>
+        </h1>
+        <p class="hero-sub fade-up fade-up-delay-2">
+          Dejá de manejar clientes por WhatsApp. Electroclima te da presupuestos, órdenes de trabajo y facturación en un solo lugar.
+        </p>
+        <div class="hero-actions fade-up fade-up-delay-3">
+          <a href="#cta" class="btn btn-primary">Quiero ser de los primeros</a>
+          <a href="#how" class="btn btn-outline-white">Ver cómo funciona</a>
+        </div>
+        <div class="social-proof fade-up fade-up-delay-4">
+          <span class="dot"></span>
+          <span>⚡ Ya hay más de 80 técnicos en lista de espera</span>
+        </div>
+      </div>
+
+      <div class="hero-mockup fade-up fade-up-delay-2">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-ui">
+              <div class="phone-header">
+                <div>
+                  <div class="phone-title">Dashboard</div>
+                  <div class="phone-date">Lunes, 27 Abr</div>
+                </div>
+                <div class="phone-avatar">JR</div>
+              </div>
+              <div class="stat-row">
+                <div class="stat-card">
+                  <div class="stat-val">12 <span>↑3</span></div>
+                  <div class="stat-lbl">Órdenes activas</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-val" style="color:#22C55E;">$84k</div>
+                  <div class="stat-lbl">Facturado abril</div>
+                </div>
+              </div>
+              <div class="section-label">Últimas órdenes</div>
+              <div class="order-card">
+                <div class="order-dot" style="background:#22C55E;"></div>
+                <div class="order-info">
+                  <div class="order-name">Martínez, Roberto</div>
+                  <div class="order-sub">Split 3000 · Instalación</div>
+                </div>
+                <span class="order-badge" style="background:rgba(34,197,94,.15);color:#22C55E;">Listo</span>
+              </div>
+              <div class="order-card">
+                <div class="order-dot" style="background:#F97316;"></div>
+                <div class="order-info">
+                  <div class="order-name">Gómez, Ana</div>
+                  <div class="order-sub">Multi split · Service</div>
+                </div>
+                <span class="order-badge" style="background:rgba(249,115,22,.15);color:#F97316;">En curso</span>
+              </div>
+              <div class="order-card">
+                <div class="order-dot" style="background:#2563EB;"></div>
+                <div class="order-info">
+                  <div class="order-name">Ferreyra, Luis</div>
+                  <div class="order-sub">Cassette · Presupuesto</div>
+                </div>
+                <span class="order-badge" style="background:rgba(37,99,235,.15);color:#2563EB;">Pendiente</span>
+              </div>
+              <div class="agenda-card">
+                <div class="agenda-title">Hoy en agenda</div>
+                <div class="agenda-count">3 visitas programadas</div>
+                <div class="agenda-hours">09:00 · 11:30 · 15:00 hs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
